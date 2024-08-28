@@ -3,12 +3,12 @@
     <fullName>Dealer_Mgt_list</fullName>
     <columns>ACCOUNT.NAME</columns>
     <columns>Dealer_Type__c</columns>
-    <columns>Dealer_Primary_PUC__c</columns>
+    <columns>Dealer_Primary_POC__c</columns>
     <columns>Dealer_Active_Pipeline_Value__c</columns>
     <columns>Dealer_Contarct_Start_Date__c</columns>
     <columns>Dealer_Contarct_End_Date__c</columns>
-    <columns>New_D_Geolocation__Latitude__s</columns>
-    <columns>New_D_Geolocation__Longitude__s</columns>
+    <columns>Dealer_Geolocation__Latitude__s</columns>
+    <columns>Dealer_Geolocation__Longitude__s</columns>
     <columns>Dealer_Status__c</columns>
     <columns>Dealer_Budget__c</columns>
     <columns>Dealer_Total_Sales_Revenue__c</columns>

@@ -1,0 +1,46 @@
+<template>
+   
+    <!-- Main layout centered horizontally -->
+    <lightning-layout horizontal-align="center">
+        <lightning-layout-item padding="horizontal-small">
+            <lightning-layout>
+                <!-- Column 1: Application description -->
+                <lightning-layout-item padding="horizontal-small" size="6">
+                    <p>{description}</p>
+                </lightning-layout-item>
+
+                <!-- Column 2: Dealer type selection and action icons -->
+                <lightning-layout-item padding="horizontal-small" size="6">
+                    <lightning-layout vertical-align="center">
+                        <lightning-layout-item padding="slds-var-m-around_medium-small" size="12">
+                            <div class="slds-var-p-around_small">
+                                <!-- Combobox for selecting dealer type -->
+                                <lightning-combobox name="Select Dealer State" value={values} placeholder="Select Dealer State"
+                                    options={dealerStateProperty} onchange={handleChange}></lightning-combobox>
+                                <p>Selected value is: {values}</p>
+                            </div>
+
+                            <!-- Action icons: Add new dealer type, account, and contact -->
+                            <div class="slds-var-p-around_small slds-align_absolute-center">
+                                <!-- Button for adding new dealer type -->
+                                <lightning-button-icon icon-name="action:add_relationship" variant="brand"
+                                    alternative-text="Add new Dealer State" title="Add new Dealer State"
+                                    onclick={openNewDealerStateStdPage}></lightning-button-icon>
+
+                                <!-- Button for adding new account -->
+                                <lightning-button-icon icon-name="action:new_account" variant="brand"
+                                    alternative-text="Add New Account" title="Add New Account" onclick={openNewAccountTypeStdPage}
+                                    class="slds-var-m-left_medium"></lightning-button-icon>
+
+                                <!-- Button for adding new dealer contact -->
+                                <lightning-button-icon icon-name="action:new_contact" variant="brand"
+                                    alternative-text="Add new Dealer Contact" title="Add new Dealer Contact"
+                                    onclick={openNewContactTypeStdPage} class="slds-var-m-left_medium"></lightning-button-icon>
+                            </div>
+                        </lightning-layout-item>
+                    </lightning-layout>
+                </lightning-layout-item>
+            </lightning-layout>
+        </lightning-layout-item>
+    </lightning-layout>
+</template>

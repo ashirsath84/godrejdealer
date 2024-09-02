@@ -1,0 +1,20 @@
+<template>
+    <!-- Container for dealer search and result components -->
+    <div class="slds-var-m-bottom_small">
+        <!-- Lightning card for dealer search -->
+        <lightning-card title="">
+            <!--child Dealer search component -->
+            <c-dealer-search onselecteddealerstate={handleSelectedDealerStateIEvent}></c-dealer-search>
+            <!--onselecteddealertype is child to parent which receive stateID -->
+        </lightning-card>
+    </div>
+
+    <div class="slds-var-m-vertical_small">
+        <!-- Lightning card for available dealers -->
+        <lightning-card title="Available Dealers">
+            <!--child Dealer search result component -->
+            <c-dealer-search-result channel-dealer-state-id={selectedDealerStateId}></c-dealer-search-result>
+            <!--onselecteddealertype is child to parent which receive stateID -->
+        </lightning-card>
+    </div>
+</template>

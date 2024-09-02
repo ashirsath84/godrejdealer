@@ -1,0 +1,40 @@
+<!-- Template for displaying dealer details and dealer POC contact location -->
+<template>
+    <!-- Check if a dealer is selected -->
+    <template if:true={IsDealerSelected}>
+        <!-- Display dealer details in a lightning card -->
+        <lightning-card title="Dealer Details" icon-name="utility:anchor">
+            <!-- Action buttons for adding review and viewing contact location -->
+            <div slot="actions">
+                <lightning-button label="Add Dealer Review" class="slds-var-p-horizontal_small" variant="brand"
+                    onclick={onDealerReviewScreenFlow}></lightning-button>
+                <lightning-button label="Dealer POC Contact Location" class="slds-var-p-horizontal_small" variant="success"
+                    onclick={onOpenContactLocation}></lightning-button>
+            </div>
+            <!-- Display the details of the selected dealer -->
+            <div class="slds-box">
+                <lightning-record-view-form object-api-name={objectApi} record-id={selectedDealerAccountId}>
+                    <div class="slds-grid">
+                        <!-- Display fields in two columns -->
+                        <div class="slds-col slds-size_1-of-2">
+                            <lightning-output-field field-name={accountName}></lightning-output-field>
+                            <lightning-output-field field-name={accContractStartDate}></lightning-output-field>
+                            <lightning-output-field field-name={primarypoc}></lightning-output-field>
+                            <lightning-output-field field-name={budget}></lightning-output-field>
+                            <lightning-output-field field-name={salesRevenue}></lightning-output-field>
+                        </div>
+                        <div class="slds-col slds-size_1-of-2">
+                            <lightning-output-field field-name={activepipeline}></lightning-output-field>
+                            <lightning-output-field field-name={contractEnd}></lightning-output-field>
+                            <lightning-output-field field-name={totalTrained}></lightning-output-field>
+                            <lightning-output-field field-name={dealerLongitude}></lightning-output-field>
+                            <lightning-output-field field-name={dealerLatitude}></lightning-output-field>
+                        </div>
+                    </div>
+                </lightning-record-view-form>
+            </div>
+        </lightning-card>
+
+        
+    </template>
+</template>

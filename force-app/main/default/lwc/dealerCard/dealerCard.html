@@ -1,0 +1,39 @@
+<template>
+
+    <!-- Container for the entire card which triggers a function on click -->
+    <div onclick={handleSelectedDealerAccount}>
+
+        <!-- Uncommented image placeholder (currently commented out) -->
+        <!--<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTVXZ0JG7MIhZjDskHgiGRBdmFNgs6aoX-li8blWP4gCw" class="slds-align_absolute-center">-->
+
+        <!-- Card container with dynamic CSS class based on dealerCardStyle -->
+        <div class={dealerCardStyle}>
+
+            <!-- User image sourced from a dynamic property -->
+            <img src={userImg} class="slds-align_absolute-center">
+
+            <!-- Container for dealer's basic information -->
+            <div class="slds-var-m-around_x-small">
+
+                <!-- Dealer name displayed with center alignment -->
+                <h3 title="Name">
+                    <p class="slds-align_absolute-center">{dealerAccount.Name}</p>
+                </h3>
+
+                <!-- Dealer POC (Point of Contact) name displayed with center alignment -->
+                <h3 title="POC Name">
+                    <p class="slds-align_absolute-center">{dealerAccount.Dealer_Primary_POC__r.Name}</p>
+                </h3>
+
+            </div>
+
+            <!-- Container for the dealer type badge -->
+            <div class="slds-var-m-around_x-small slds-align_absolute-center">
+                <!-- Badge showing the dealer type with dynamic CSS class for styling -->
+                <lightning-badge label={dealerAccount.Dealer_State__r.Name} class={channelDealerStyle}></lightning-badge>
+            </div>
+
+        </div>
+    </div>
+
+</template>

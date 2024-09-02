@@ -14,7 +14,7 @@ export default class DealerSearch extends NavigationMixin (LightningElement) {
     handleChange(event) {
         const dealerStateId = event.detail.value; // Get the selected value from the combobox
         // Dispatch a custom event with the selected dealer type ID
-        const dealerStateSelectedChangeEvent = new CustomEvent('selectedstatetype', { detail: dealerStateId });
+        const dealerStateSelectedChangeEvent = new CustomEvent('selecteddealerstate', { detail: dealerStateId });
         this.dispatchEvent(dealerStateSelectedChangeEvent);
     }
 

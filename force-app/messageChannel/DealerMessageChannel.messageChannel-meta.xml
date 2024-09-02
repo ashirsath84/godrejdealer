@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LightningMessageChannel xmlns="http://soap.sforce.com/2006/04/metadata"> 
+   <masterLabel>DealerMessageChannel</masterLabel>
+   <isExposed>true</isExposed>
+   <description>Lightning Message Channelfor carring selected Dealer Account From Dealer card publisher</description>
+
+   <lightningMessageFields>
+       <fieldName>selectedDealerAccountId</fieldName>
+       <description>This is record Id of Selected Dealer Account</description>
+   </lightningMessageFields>
+
+   <lightningMessageFields>
+       <fieldName>channelName</fieldName>
+       <description>Name of the Channel</description>
+   </lightningMessageFields>
+
+   <lightningMessageFields>
+    <fieldName>selectedDealerAccountName</fieldName>
+    <description>This is name of Selected Dealer Account</description>
+</lightningMessageFields>
+
+</LightningMessageChannel>

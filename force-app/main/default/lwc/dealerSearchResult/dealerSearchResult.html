@@ -1,3 +1,28 @@
 <template>
-    <p>hello searchresult</p>
+    <!-- Main layout with multiple rows and center alignment -->
+    <lightning-layout multiple-rows horizontal-align="center">
+       
+        <!-- Conditional rendering: Check if dealers are found -->
+        <template if:true={IsDealerfound}>
+            <!-- Iterate over the dealer data fetched from the database -->
+            <template for:each={dealerDataFromDB} for:item="dealer">
+                <!-- Each dealer card -->
+                <lightning-layout-item key={dealer.Id} padding="around-small" size="12" 
+                    small-device-size="6" large-device-size="3" medium-device-size="4">
+                    <!-- Dealer card component -->
+                    <c-dealer-card 
+                        dealer-account={dealer} 
+                        selected-dealer-account-id={selectDealerCardAccountId}
+                        ondealerselect={selectDealerHandler}>
+                    </c-dealer-card>
+                </lightning-layout-item>
+            </template>
+        </template>
+
+        <!-- Message displayed if no dealers are found -->
+        <template if:false={IsDealerfound}>
+            <p>No Dealers Data Found</p>
+        </template>
+        
+    </lightning-layout>
 </template>

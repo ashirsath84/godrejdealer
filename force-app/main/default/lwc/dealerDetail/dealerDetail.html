@@ -34,7 +34,10 @@
                 </lightning-record-view-form>
             </div>
         </lightning-card>
-
+<!-- Show Dealer POC Location on a Map if showLocation is true -->
+<template if:true={showLocation}>
+    <c-dealer-con-location dealer-account-id={selectedDealerAccountId}></c-dealer-con-location>
+</template>
         
     </template>
 </template>

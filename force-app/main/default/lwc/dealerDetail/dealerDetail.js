@@ -83,4 +83,8 @@ export default class DealerDetail extends NavigationMixin(LightningElement) {
             },
         });
     }
+    // Handler for the "Dealer POC Contact Location" button click
+    onOpenContactLocation() {
+        this.showLocation = true; // Set showLocation to true to display the map
+    }
 }
